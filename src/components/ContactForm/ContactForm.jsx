@@ -36,16 +36,16 @@ export default function ContactForm({ addContact }) {
             initialValues={initialValues}
             onSubmit={handleSubmit}
             validationSchema={ContactFormSchema} >
-            <Form>
+            <Form className={css.form}>
                 <label htmlFor={nameId}>Name</label>
-                <Field type="text" name="name" id={nameId}/>
+                <Field className={css.field} type="text" name="name" id={nameId}/>
                 <ErrorMessage
                     className={css.error}
                     name="name"
                     component="span"
                 />
                 <label htmlFor={numberId}>Number</label>
-                <Field type="number" name="number" id={numberId}/>
+                <Field className={css.field} type="number" name="number" id={numberId}/>
                 <ErrorMessage
                     className={css.error}
                     name="number"
